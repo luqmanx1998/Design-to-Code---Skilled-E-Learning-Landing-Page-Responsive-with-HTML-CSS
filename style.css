@@ -203,6 +203,7 @@ p {
 .card__cta {
     color: var(--color-pink-600);
     font-weight: 700;
+    cursor: pointer;
 }
 
 .footer {
