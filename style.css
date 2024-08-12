@@ -1,0 +1,340 @@
+/*--------------CUSTOM STYLE---------------*/
+
+:root {
+    --color-blue-900: #13183F;
+    --color-blue-600: #666CA3;
+    --color-pink-600: #F74780;
+    --color-pink-300: #FFA7C3;
+    --color-grey: #83869A;
+    --color-white: #FFFFFF;
+    --gradient-pink: linear-gradient(to top, #F02AA6, #FF6F48);
+    --gradient-purple: linear-gradient(to bottom, #4851FF, #F02AA6);
+
+    --header-font-1: 5.6rem;
+    --header-font-2: 4rem;
+    --header-font-3: 3.2rem;
+    --header-font-4: 2.4rem;
+    --header-font-5: 2rem;
+
+    --p-font-1: 1.8rem;
+    --p-font-2: 1.6rem;
+
+    --spacing-mobile-xlrg: 6.4rem;
+    --spacing-mobile-lrg: 4rem;
+    --spacing-mobile-xmed2: 3.2rem;
+    --spacing-mobile-xmed: 2.4rem;
+    --spacing-mobile-med: 2rem;
+    --spacing-mobile-sm: 1.6rem;
+
+    --spacing-tablet-xlrg: 14.4rem;
+    --spacing-tablet-lrg: 6.4rem;
+    --spacing-tablet-med: 4.4rem;
+    --spacing-tablet-sm: 2.4rem;
+
+    --spacing-desktop-sm: 6.4rem;
+    --spacing-desktop-med: 8rem;
+    --spacing-desktop-lrg: 14.4rem;
+
+}
+
+
+/*--------------CSS RESET--------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/*------------GENERAL STYLES---------*/
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: var(--p-font-1);
+    padding-top: var(--spacing-mobile-sm);
+    background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+}
+
+body > *:not(footer) {
+    padding-inline: var(--spacing-mobile-med);
+}
+
+h1 {
+    font-size: var(--header-font-2);
+}
+
+h2 {
+    font-size: var(--header-font-3);
+}
+
+h3 {
+    font-size: var(--header-font-4);
+}
+
+h4 {
+    font-size: var(--header-font-5);
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.5;
+    color: var(--color-grey);
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 1.6rem 3.2rem;
+    border-radius: 2.8rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.header__btn {
+    color: var(--color-white);
+    background-color: var(--color-blue-900);
+}
+
+.header__btn:hover {
+    background-color: var(--color-blue-600);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-mobile-sm);
+}
+
+.header__nav img,
+.footer img {
+    max-height: 2rem;
+}
+
+.section__hero {
+    padding-top: 6.4rem;
+}
+
+.hero__header {
+    margin-bottom: var(--spacing-mobile-xmed);
+}
+
+.hero__text {
+    margin-bottom: var(--spacing-mobile-lrg);
+}
+
+.hero__btn {
+    background-image: var(--gradient-pink);
+    color: var(--color-white);
+    margin-bottom: 4.8rem;
+}
+
+.hero__btn:hover {
+    background: var(--gradient-preset-1-light, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+}
+
+.hero__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__img {
+    display: inline-block;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.section__courses {
+    padding: 6.4rem 0 8rem 0;
+}
+
+.courses__header {
+    padding: 3.2rem;
+    color: var(--color-white);
+    background-image: var(--gradient-pink);
+    border-radius: 1.5rem;
+}
+
+.courses__card {
+    padding: 0 3.2rem 4rem 3.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 25px 50px 0px rgba(6,22,141,0.1);
+    border: none;
+}
+
+.section__courses > *:not(:last-child) {
+    margin-bottom: 6rem;
+}
+
+.card__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-mobile-xmed);
+    margin-top: 0.2rem;
+}
+
+.card__img {
+    transform: translateY(-50%);
+    align-self: start;
+}
+
+.card__text {
+    font-size: var(--p-font-2);
+    font-weight: 700;
+}
+
+.card__cta {
+    color: var(--color-pink-600);
+    font-weight: 700;
+}
+
+.footer {
+    background-color: var(--color-blue-900);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem 2rem;
+}
+
+.footer__btn {
+    background-image: var(--gradient-purple);
+    color: var(--color-white);
+    transition: all .2s;
+}
+
+.footer__btn:hover {
+    background: var(--gradient-preset-2-light, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+}
+
+@media only screen and (min-width: 48em) /* 768PX */ {
+
+    body {
+        padding-top: var(--spacing-tablet-sm);
+    }
+
+    body > *:not(footer) {
+        padding-inline: var(--spacing-tablet-med);
+    }
+
+    .header__nav {
+        padding-bottom: var(--spacing-tablet-sm);
+    }
+
+    .section__hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+        padding: 10.55rem 0;
+    }
+
+    .hero__img-container {
+        position: relative;
+    }
+
+    .hero__img-container img {
+        position: absolute;
+        display: block;
+        bottom: -20%;
+        left: -10%;
+        z-index: -1;
+    }
+
+    .section__courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.4rem;
+        padding-bottom: 8.4rem;
+    }
+
+    .section__courses > * {
+        margin-bottom: 6rem;
+    }
+
+    .courses__header {
+        padding: 6.4rem 3.2rem 4rem 3.2rem;
+    }
+
+    .card__text {
+        font-size: var(--p-font-1);
+        font-weight: 500;
+        height: 11.8rem;
+    }
+
+    .footer {
+        padding: 2.4rem 4.4rem;
+    }
+}
+
+@media only screen and (min-width: 75em) /* 1200PX */ {
+
+    body > *:not(footer) {
+        padding-inline: 0;
+        max-width: 112rem;
+        margin-inline: auto;
+    }
+
+    h1 {
+        font-size: var(--header-font-1);
+    }
+
+    .header__nav img,
+    .footer img {
+    max-height: 2.8rem;
+    }
+
+    .section__hero {
+        gap: 3.2rem;
+        padding: 17.45rem 0;
+    }
+
+    .hero__text {
+        max-width: 45.7rem;
+    }
+
+    .hero__img-container img {
+        bottom: -35%;
+        left: -1%;
+    }
+
+    .section__courses {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3.2rem;
+        row-gap: 2.4rem;
+    }
+
+    .courses__header {
+        font-size: var(--header-font-3);
+    }
+
+    .card__header {
+        font-size: var(--header-font-4);
+    }
+
+    footer {
+        background-color: var(--color-blue-900);
+    }
+
+    .footer {
+        max-width: 112rem;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+
+}
