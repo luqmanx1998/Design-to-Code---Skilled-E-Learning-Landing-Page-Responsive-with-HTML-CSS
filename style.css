@@ -60,6 +60,7 @@ body {
     font-size: var(--p-font-1);
     padding-top: var(--spacing-mobile-sm);
     background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+    overflow-x: hidden;
 }
 
 body > *:not(footer) {
